@@ -1,5 +1,5 @@
 # MINI BANKING SYSTEM ~ Capstone Project
-# Coder: sim
+# Coder: Sim
 
 ################################################################################
 #  This program runs a simple little banking system with a menu that lets     ##
@@ -14,7 +14,7 @@ def format_currency(amount):
     return f"{amount:>12,.2f}"
 
 # PROMPT FOR INPUT Function
-def prompt_for_input(prompt):
+def prompt_for_num(prompt):
     while True:
         try:
             fAmount = float(input(prompt))
@@ -26,7 +26,7 @@ def prompt_for_input(prompt):
 
 # DEPOSIT Function
 def deposit(balance, txn_list):
-    fAmount = prompt_for_input("Enter deposit amount: ")
+    fAmount = prompt_for_num("Enter deposit amount: ")
     balance += fAmount
     txn_list.append(("Deposited:", fAmount))
     print(f"Deposit successful! New balance: ${format_currency(balance)}\n")
@@ -34,7 +34,7 @@ def deposit(balance, txn_list):
 
 # WITHDRAW Function
 def withdraw(balance, txn_list):
-    fAmount = prompt_for_input("Enter withdrawal amount: ")
+    fAmount = prompt_for_num("Enter withdrawal amount: ")
     if fAmount > balance:
         print("Insufficient Funds.\n")
     else:
@@ -63,7 +63,7 @@ def add_interest(balance, txn_list):
     if balance == 0:
         print("Balance is $0.00 — no interest will be applied.\n")
         return balance, txn_list
-    fRate = prompt_for_input("Enter interest rate: ")
+    fRate = prompt_for_num("Enter interest rate: ")
     fInterest = balance * (fRate / 100) / 12
     balance += fInterest
     txn_list.append(("Interest:", fInterest))
@@ -105,7 +105,7 @@ def save_to_file(balance, txn_list):
 
 # MAIN Function
 def main():
-    print("Welcome to Zim's Mini-Bank")
+    print("Welcome to Sim's Mini-Bank")
     # Begin
     balance = 0.0
     txn_list = []
