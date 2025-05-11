@@ -73,7 +73,7 @@ def add_interest(balance, txn_list):
 # SAVE TO FILE Function
 def save_to_file(balance, txn_list):
     file_name = "BankStatement.txt"
-    _CONTENT_WIDTH_ = 30 
+    _CONTENT_WIDTH_ = 30 # Content width for `txn summary box`
 
     # Calculate total deposited and withdrawn
     total_deposited = sum(amt for txn_type, amt in txn_list if txn_type == "Deposited:")  # Sum of deposits
