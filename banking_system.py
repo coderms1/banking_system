@@ -1,13 +1,13 @@
 # MINI BANKING SYSTEM ~ Capstone Project
 # Coder: Sim
 
-#################################################################################
-##  This program runs a simple little banking system with a menu that lets     ##
-##    you do all the basics.  You can deposit, withdraw, check your balance,   ##
-##     apply monthly interest, & even save your transaction history to a file. ##
-##    Everything’s tracked in a list, fully validated, & printed out nice and  ##
-##  clean. It keeps things simple, organized, & works almost like a real ATM!  ##
-#################################################################################
+################################################################################
+#  This program runs a simple little banking system with a menu that lets     ##
+#    you do all the basics.  You can deposit, withdraw, check your balance,   ##
+#     apply monthly interest, & even save your transaction history to a file. ##
+#    Everything’s tracked in a list, fully validated, & printed out nice and  ##
+#  clean. It keeps things simple, organized, & works almost like a real ATM!  ##
+################################################################################
 
 # FORMAT CURRENCY Function
 def format_currency(amount):
@@ -73,11 +73,11 @@ def add_interest(balance, txn_list):
 # SAVE TO FILE Function
 def save_to_file(balance, txn_list):
     file_name = "BankStatement.txt"
-    _CONTENT_WIDTH_ = 30  # Smaller width for compact box
+    _CONTENT_WIDTH_ = 30 
 
     # Calculate total deposited and withdrawn
-    total_deposited = sum(amt for typ, amt in txn_list if typ == "Deposited:")  # Sum all deposit amounts
-    total_withdrawn = sum(amt for typ, amt in txn_list if typ == "Withdrew:")  # Sum all withdrawal amounts
+    total_deposited = sum(amt for txn_type, amt in txn_list if txn_type == "Deposited:")  # Sum of deposits
+    total_withdrawn = sum(amt for txn_type, amt in txn_list if txn_type == "Withdrew:")  # Sum of withdrawals 
 
     with open(file_name, "w") as f:
         # Write header without box
