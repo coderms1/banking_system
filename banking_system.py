@@ -17,29 +17,29 @@ def format_currency(amount):
 def prompt_for_num(prompt):
     while True:
         try:
-            fAmount = float(input(prompt))
-            if fAmount > 0:
-                return fAmount
+            value = float(input(prompt))
+            if value > 0:
+                return value
             print("Enter a number that is > 0")
         except ValueError:
             print("Enter a valid number.")
 
 # DEPOSIT Function
 def deposit(balance, txn_list):
-    fAmount = prompt_for_num("Enter deposit amount: ")
-    balance += fAmount
-    txn_list.append(("Deposited:", fAmount))
+    value = prompt_for_num("Enter deposit amount: ")
+    balance += value
+    txn_list.append(("Deposited:", value))
     print(f"Deposit successful! New balance: ${format_currency(balance)}\n")
     return balance, txn_list
 
 # WITHDRAW Function
 def withdraw(balance, txn_list):
-    fAmount = prompt_for_num("Enter withdrawal amount: ")
-    if fAmount > balance:
+    value = prompt_for_num("Enter withdrawal amount: ")
+    if value > balance:
         print("Insufficient Funds.\n")
     else:
-        balance -= fAmount
-        txn_list.append(("Withdrew:", fAmount))
+        balance -= value
+        txn_list.append(("Withdrew:", value))
         print(f"Withdrawal successful! New balance: ${format_currency(balance)}\n")
     return balance, txn_list
 
@@ -54,8 +54,8 @@ def view_history(txn_list):
     if not txn_list:
         print(f"| No transactions yet. {' ':*15}|")
     else:
-        for sType, fAmt in txn_list:
-            print(f"| {sType:<20} ${format_currency(fAmt)} |")
+        for type, fAmt in txn_list:
+            print(f"| {type:<20} ${format_currency(fAmt)} |")
     print("+----------------------+----------------+\n")
 
 # APPLY INTEREST Function
@@ -63,23 +63,23 @@ def add_interest(balance, txn_list):
     if balance == 0:
         print("Balance is $0.00 — no interest will be applied.\n")
         return balance, txn_list
-    fRate = prompt_for_num("Enter interest rate: ")
-    fInterest = balance * (fRate / 100) / 12
-    balance += fInterest
-    txn_list.append(("Interest:", fInterest))
-    print(f"Interest has been applied: ${format_currency(fInterest)} New balance: ${format_currency(balance)}\n")
+    rate = prompt_for_num("Enter interest rate: ")
+    interest = balance * (rate / 100) / 12
+    balance += interest
+    txn_list.append(("Interest:", interest))
+    print(f"Interest has been applied: ${format_currency(interest)} New balance: ${format_currency(balance)}\n")
     return balance, txn_list
 
 # SAVE TO FILE Function
 def save_to_file(balance, txn_list):
-    sFileName = "BankStatement.txt"
+    file_name = "BankStatement.txt"
     _CONTENT_WIDTH_ = 30  # Smaller width for compact box
 
     # Calculate total deposited and withdrawn
     total_deposited = sum(amt for typ, amt in txn_list if typ == "Deposited:")  # Sum all deposit amounts
     total_withdrawn = sum(amt for typ, amt in txn_list if typ == "Withdrew:")  # Sum all withdrawal amounts
 
-    with open(sFileName, "w") as f:
+    with open(file_name, "w") as f:
         # Write header without box
         f.write(f"{'Zim`s Mini Bank':^30}\n")
         f.write(f"{'Transaction History':^30}\n")
@@ -89,9 +89,9 @@ def save_to_file(balance, txn_list):
         if not txn_list:
             f.write(f"{'No transactions yet.':^30}\n")
         else:
-            for sType, fAmt in txn_list:
+            for type, fAmt in txn_list:
                 formatted_amt = format_currency(fAmt)
-                f.write(f"{sType:<12} ${formatted_amt.strip():>12}\n")
+                f.write(f"{type:<12} ${formatted_amt.strip():>12}\n")
         f.write("\n")
 
         # Write boxed summary
@@ -101,7 +101,7 @@ def save_to_file(balance, txn_list):
         f.write(f"| {f'Balance: ${format_currency(balance).strip()}':<{_CONTENT_WIDTH_}} |\n")
         f.write(f"+{'-' * _CONTENT_WIDTH_}+\n")
 
-    print(f"Transaction history saved to {sFileName}\n")
+    print(f"Transaction history saved to {file_name}\n")
 
 # MAIN Function
 def main():
