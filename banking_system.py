@@ -54,8 +54,8 @@ def view_history(txn_list):
     if not txn_list:
         print(f"| No transactions yet. {' ':*15}|")
     else:
-        for type, fAmt in txn_list:
-            print(f"| {type:<20} ${format_currency(fAmt)} |")
+        for type, amt in txn_list:
+            print(f"| {type:<20} ${format_currency(amt)} |")
     print("+----------------------+----------------+\n")
 
 # APPLY INTEREST Function
@@ -89,8 +89,8 @@ def save_to_file(balance, txn_list):
         if not txn_list:
             f.write(f"{'No transactions yet.':^30}\n")
         else:
-            for type, fAmt in txn_list:
-                formatted_amt = format_currency(fAmt)
+            for type, amt in txn_list:
+                formatted_amt = format_currency(amt)
                 f.write(f"{type:<12} ${formatted_amt.strip():>12}\n")
         f.write("\n")
 
