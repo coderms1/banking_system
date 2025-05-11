@@ -1,13 +1,13 @@
 # MINI BANKING SYSTEM ~ Capstone Project
 # Coder: Sim
 
-################################################################################
-#  This program runs a simple little banking system with a menu that lets     ##
-#    you do all the basics.  You can deposit, withdraw, check your balance,   ##
-#     apply monthly interest, & even save your transaction history to a file. ##
-#    Everything’s tracked in a list, fully validated, & printed out nice and  ##
-#  clean. It keeps things simple, organized, & works almost like a real ATM!  ##
-################################################################################
+#################################################################################
+##  This program runs a simple little banking system with a menu that lets     ##
+##    you do all the basics.  You can deposit, withdraw, check your balance,   ##
+##     apply monthly interest, & even save your transaction history to a file. ##
+##    Everything’s tracked in a list, fully validated, & printed out nice and  ##
+##  clean. It keeps things simple, organized, & works almost like a real ATM!  ##
+#################################################################################
 
 # FORMAT CURRENCY Function
 def format_currency(amount):
@@ -54,8 +54,8 @@ def view_history(txn_list):
     if not txn_list:
         print(f"| No transactions yet. {' ':*15}|")
     else:
-        for type, amt in txn_list:
-            print(f"| {type:<20} ${format_currency(amt)} |")
+        for txn_type, amt in txn_list:
+            print(f"| {txn_type:<20} ${format_currency(amt)} |")
     print("+----------------------+----------------+\n")
 
 # APPLY INTEREST Function
@@ -89,9 +89,9 @@ def save_to_file(balance, txn_list):
         if not txn_list:
             f.write(f"{'No transactions yet.':^30}\n")
         else:
-            for type, amt in txn_list:
+            for txn_type, amt in txn_list:
                 formatted_amt = format_currency(amt)
-                f.write(f"{type:<12} ${formatted_amt.strip():>12}\n")
+                f.write(f"{txn_type:<12} ${formatted_amt.strip():>12}\n")
         f.write("\n")
 
         # Write boxed summary
