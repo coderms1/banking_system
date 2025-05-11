@@ -1,5 +1,5 @@
 # MINI BANKING SYSTEM ~ Capstone Project
-# Coder: Sim
+# Coder: sim
 
 ################################################################################
 #  This program runs a simple little banking system with a menu that lets     ##
@@ -20,8 +20,7 @@ def prompt_for_input(prompt):
             fAmount = float(input(prompt))
             if fAmount > 0:
                 return fAmount
-            else:
-                print("Enter a number that is > 0")
+            print("Enter a number that is > 0")
         except ValueError:
             print("Enter a valid number.")
 
