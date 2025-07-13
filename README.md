@@ -7,6 +7,8 @@ and save your transaction history to a file.
 
 You’ll get some smooth terminal output *and* a crispy `.txt` statement when you're done!
 
+```bash
+
 ---
 
 ## 🚀 Features
@@ -29,7 +31,6 @@ git clone https://github.com/coderms1/banking_system.git
 Make sure you're running Python 3.6+:
 No extra dependencies — runs with pure Python standard library.
 
-```bash
 
 🧑‍💻 Usage
 Run the program:
