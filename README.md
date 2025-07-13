@@ -1,90 +1,82 @@
-**Sim's Mini-Bank**
+# Sim's Mini-Bank 💵
 
-# Description
-A simple command-line banking system implemented in Python, allowing users to manage deposits, 
-withdrawals, balance checks, transaction history, interest calculations, and save transaction summaries to a file.
+A clean little command-line banking app built in Python. 
+It’s simple, structured, and works like a tiny ATM — deposit money, 
+make withdrawals, check your balance, calculate interest, 
+and save your transaction history to a file.
 
-# Features
+You’ll get some smooth terminal output *and* a crispy `.txt` statement when you're done!
 
-     Data Structures: Lists (txn_list), tuples (transaction records).
-     String Methods: f-strings, strip(), alignment specifiers (:<n, :>n, :^n).
-     File Handling: open(), write() with context manager.
-     Control Flow: while, for, if/else, match.
-     Functions: Modular functions with return values, built-in functions (sum, len, etc.).
-     Exception Handling: try/except for input validation.
-     Formatting: ASCII box drawing, table formatting.
+---
 
+## 🚀 Features
 
-# **Installation**
+- **Real-world flow**: deposit, withdraw, check balance, view history, apply interest, and save + exit
+- **Data Structures**: Lists + tuples to track transactions
+- **File Handling**: Generates a clean `BankStatement.txt` on exit
+- **String Formatting**: f-strings + alignment to make things look tight
+- **Control Flow**: while loops, match-case, if/else logic
+- **Functions**: All modular, return-based and readable
+- **Error Handling**: try/except guards for clean input
+- **Output Formatting**: ASCII box, formatted transaction rows
 
-Clone the Repository:
-git clone https://github.com/your-username/zims-mini-bank.git
-cd zims-mini-bank
+---
 
-Ensure Python 3 is Installed:
+## 🛠️ Installation
 
-The program requires Python 3.6 or higher.
-Check your Python version:python3 --version
+git clone https://github.com/coderms1/banking_system.git
 
-If not installed, download from python.org.
+Make sure you're running Python 3.6+:
+No extra dependencies — runs with pure Python standard library.
 
-No External Dependencies:
+```bash
 
-The program uses only Python's standard library.
+🧑‍💻 Usage
+Run the program:
 
+python banking_system.py
 
-# **Usage**
+Use the menu to:
 
-Run the Program:python3 bank_program.py
+- Deposit Money
+- Withdraw Money
+- Check Balance
+- View Transaction History
+- Apply Monthly Interest
+- Save & Exit
 
-# Interact with the Menu:
-     1-Deposit Money: Add funds to your account
-     2-Withdraw Money: Remove funds if sufficient balance exists
-     3-Check Balance: View the current account balance
-     4-View Transaction History: Display all transactions (deposits, withdrawals, interest)
-     5-Apply Interest: Calculate and add monthly interest based on a user-provided rate
-     6-Save and Exit: Save transaction summary to BankStatement.txt and exit the program
+Just follow the prompts and enter amounts/rates when asked.
+The app handles all input/data validation.
 
-     [Enter numerical inputs as prompted (e.g., amounts, interest rates)]
+📄 Output
+Transaction history prints cleanly to the console, and when you choose option 6, a .txt file (BankStatement.txt) is created with a full summary.
 
+Example output:
 
-# **Output:**
-Transactions are displayed on the console.
-On exit (option 6), a BankStatement.txt file is generated with a summary, including total deposited, total withdrawn, and balance in a boxed format.
+        Sim's Mini Bank        
+     Transaction History       
 
+Deposited:   $ 500.00
+Withdrew:    $ 200.00
+Interest:    $ 2.50
 
-      **Example BankStatement.txt:
-            Zim`s Mini Bank      
-         Transaction History     
-      
-      Deposited:   $      500.00
-      Withdrew:    $      200.00
-      Interest:    $        2.50
-      
-      +------------------------------+
-      | Total Deposited: $500.00     |
-      | Total Withdrawn: $200.00     |
-      | Balance: $302.50             |
-      +------------------------------+
-      **
++------------------------------+
+| Total Deposited: $ 500.00   |
+| Total Withdrawn: $ 200.00   |
+| Balance:        $ 302.50    |
++------------------------------+
 
-# **File Structure**
-      zims-mini-bank/
-      ├── bank_program.py       # Main Python script for the banking system
-      ├── BankStatement.txt     # Generated file with transaction summary (created on exit)
-      └── README.md             # This file
-      
+📁 File Structure
 
-# **Contributing**
+Main-Directory/
+├── banking_system.py       # Main script
+├── BankStatement.txt     # Auto-generated on exit
+└── README.md             # This file
+
+🙌 Contributing
 Support your local build0rs.
 
+📬 Contact
+@coderms1 on Github =]
 
-# **Fork the repository.**
-Create a new branch (git checkout -b feature/your-feature).
-Make changes and commit (git commit -m "Add your feature").
-Push to your branch (git push origin feature/your-feature).
-Open a pull request.
-
-
-# **Contact**
-For questions or feedback, open an issue on the GitHub repository or contact coder-zim on GitHub.
+---
