@@ -1,6 +1,6 @@
 # Sim's Mini-Bank 💵
 
-```bash
+```
 A clean little command-line banking app built in Python. 
 It’s simple, structured, and works like a tiny ATM — deposit money, 
 make withdrawals, check your balance, calculate interest, 
@@ -53,7 +53,7 @@ Transaction history prints cleanly to the console, and when you choose option 6,
 
 Example output:
 
-        Sim's Mini Bank        
+        MS1's Mini Bank        
      Transaction History       
 
 Deposited:   $ 500.00
@@ -63,7 +63,7 @@ Interest:    $ 2.50
 +------------------------------+
 | Total Deposited: $ 500.00   |
 | Total Withdrawn: $ 200.00   |
-| Balance:        $ 302.50    |
+| Balance:         $ 302.50   |
 +------------------------------+
 
 📁 File Structure
@@ -73,10 +73,8 @@ Main-Directory/
 ├── BankStatement.txt     # Auto-generated on exit
 └── README.md             # This file
 
-🙌 Contributing
-Support your local build0rs.
-
 📬 Contact
 @coderms1 on Github =]
 
 ---
+-MS1
