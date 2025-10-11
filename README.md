@@ -2,7 +2,7 @@
 
 ```
 A clean little command-line banking app built in Python. 
-It’s simple, structured, and works like a tiny ATM — deposit money, 
+It’s simple, structured, and works like a tiny ATM; deposit money, 
 make withdrawals, check your balance, calculate interest, 
 and save your transaction history to a file.
 
@@ -70,8 +70,8 @@ Interest:    $ 2.50
 
 Main-Directory/
 ├── banking_system.py       # Main script
-├── BankStatement.txt     # Auto-generated on exit
-└── README.md             # This file
+├── BankStatement.txt       # Auto-generated on exit
+└── README.md               # This file 🙋🏼‍♂️
 
 📬 Contact
 @coderms1 on Github =]
