@@ -1,4 +1,4 @@
-# Sim's Mini-Bank 💵
+# MS1's Mini-Bank 💵
 
 ```
 A clean little command-line banking app built in Python. 
