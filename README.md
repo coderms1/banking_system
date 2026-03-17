@@ -12,14 +12,14 @@ You’ll get some smooth terminal output *and* a crispy `.txt` statement when yo
 
 ## 🚀 Features
 
-- **Real-world flow** >> deposit, withdraw, check balance, view history, apply interest, and save + exit
-- **Data Structures** >> Lists + tuples to track transactions
-- **File Handling** >> Generates a clean `BankStatement.txt` on exit
-- **String Formatting** >> f-strings + alignment to make things look tight
-- **Control Flow** >> while loops, match-case, if/else logic
-- **Functions** >> All modular, return-based and readable
-- **Error Handling** >> try/except guards for clean input
-- **Output Formatting** >> ASCII box, formatted transaction rows
+- Real-world flow >> deposit, withdraw, check balance, view history, apply interest, and save + exit
+- Data Structures >> Lists + tuples to track transactions
+- File Handling >> Generates a clean `BankStatement.txt` on exit
+- String Formatting >> f-strings + alignment to make things look tight
+- Control Flow >> while loops, match-case, if/else logic
+- Functions >> All modular, return-based and readable
+- Error Handling >> try/except guards for clean input
+- Output Formatting >> ASCII box, formatted transaction rows
 
 ---
 
